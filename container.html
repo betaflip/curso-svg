@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+
+<style>
+    .circle {
+        stroke: #000;
+        stroke-width: 4;
+    }
+
+    .circle1 {
+        fill: #324872;
+        fill-opacity: 0.4;
+        stroke-dasharray: 1;
+    }
+
+    .circle2 {
+        fill: #9a9a21;
+        fill-opacity: 0.7;
+        stroke-dasharray: 345;
+        stroke-dashoffset: 0;
+    }
+
+    .circle3 {
+        fill: #ff4291;
+        fill-opacity: 0.9;
+    }
+</style>
+
+<body>
+    <svg style="width: 500px; height: 150px;" viewBox="0 0 500 150">
+        <circle class="circle circle1" r="55" cx="200" cy="70" />
+        <circle class="circle circle2" r="55" cx="250" cy="70" />
+    </svg>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        var i = 1;
+        var j = 345;
+//        var fn = setInterval(function() {
+//            i++;
+//            $('.circle1').css('strokeDasharray', i);
+//            if(i == 345) {
+//                clearInterval(fn)
+//            }
+//        }, 30)
+//        
+        var fn = setInterval(function() {
+            i++;
+            $('.circle2').css('strokeDashoffset', i);
+            if(i == 345) {
+                clearInterval(fn)
+            }
+        }, 30)
+    </script>
+</body>
+
+</html>
